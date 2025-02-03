@@ -26,7 +26,7 @@ export default function Card() {
             <div className="card">
                 {Array.isArray(festivals) && festivals.map((festival, index) => (
                     <div key={index} id="card__content">
-                    <img src={festival.image} alt={festival.name} className='w-xs' id="card__img" />
+                    <img src={festival.image} alt={festival.name} className='w-3xs' id="card__img" />
                     <h2 id="card__title">{festival.name}</h2>
                     <ul id="card__detail">
                       {festival.details.map((detail, i) => (
