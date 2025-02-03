@@ -24,14 +24,14 @@
 }
 
 :root {
-  --background: #E2E2B6;
-  --foreground: #021526;
+  --background: #9290C3;
+  --foreground: #070F2B;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #021526;
-    --foreground: #E2E2B6;
+    --background: #0B1320;
+    --foreground: #FEF9E6;
   }
 }
 
