@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 
     cards.each((index, card) => {
       const image = $(card)
-        .find(".card__img a.mparticle-event img")
+        .find(".card__img img")
         .attr("src");
 
       const categoryText = $(card)
