@@ -4,7 +4,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 
-export default function Card() {
+export default function Card_full() {
   const [festivals, setFestivals] = useState([]);
 
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function Card() {
       </Head>
       <main className="flex justify-center items-center min-h-screen bg-[#0B1320]">
         <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-4">
-          {festivals.slice(0, 3).map((festival, index) => (
+          {festivals.map((festival, index) => (
             <div
               key={index}
               className="relative w-[300px] h-[400px] bg-white/20 rounded-2xl overflow-hidden group"
