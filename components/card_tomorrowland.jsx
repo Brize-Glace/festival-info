@@ -4,13 +4,13 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 
-export default function Card() {
+export default function Card_insomniac() {
   const [festivals, setFestivals] = useState([]);
 
   useEffect(() => {
     async function fetchFestivals() {
       try {
-        const response = await fetch("/api/scrape_insomniac");
+        const response = await fetch("/api/scrape_tomorrowland");
         const data = await response.json();
         setFestivals(data.festivals || []);
       } catch (error) {
@@ -57,12 +57,12 @@ export default function Card() {
                   <p>
                     {" "}
                     <FontAwesomeIcon icon={faLocationDot} width={20} />{" "}
-                    {festival.details[1]}
+                    {festival.location}
                   </p>
                   <p>
                     {" "}
                     <FontAwesomeIcon icon={faCalendar} width={20} />{" "}
-                    {festival.details[0]}
+                    {festival.date}
                   </p>
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function Card() {
           ))}
           <div className="col-span-full flex justify-center">
             <a id="cta"
-              href="/event"
+              href="/event?organizer=tomorrowland"
               className="mt-4 px-4 py-2 bg-white/20 text-white font-bold rounded hover:bg-white/10 transition-colors"
             >
               See More

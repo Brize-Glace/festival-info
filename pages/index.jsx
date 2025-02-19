@@ -1,4 +1,5 @@
-import Card from "@/components/card";
+import Card_insomniac from "@/components/card_insomniac";
+import Card_tomorrowland from "@/components/card_tomorrowland";
 import Navbar from "@/components/navbar";
 import Head from "next/head";
 import { useEffect, useState } from "react";
@@ -21,7 +22,11 @@ export default function Home() {
       </header>
       <section id="InsomniacEvents" className="h-[100vh]">
         <h2 className="text-center pt-8" style={{fontSize: '3rem'}}>Insomniac Events</h2>
-        <Card/>
+        <Card_insomniac/>
+      </section>
+      <section id="InsomniacEvents" className="h-[100vh]">
+        <h2 className="text-center pt-8" style={{fontSize: '3rem'}}>Tomorrowland Events</h2>
+        <Card_tomorrowland/>
       </section>
     </main>
     </>
