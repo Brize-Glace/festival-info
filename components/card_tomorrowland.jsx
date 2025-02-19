@@ -4,7 +4,7 @@ import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import Head from "next/head";
 import { faCalendar } from "@fortawesome/free-solid-svg-icons";
 
-export default function Card_insomniac() {
+export default function Card_tomorrowland() {
   const [festivals, setFestivals] = useState([]);
 
   useEffect(() => {
